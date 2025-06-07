@@ -1,0 +1,191 @@
+<!-- Meta Service Form Modal -->
+<div id="metaFormModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center overflow-y-auto py-0 px-0 hidden modal-animation">
+    <div class="bg-white rounded-lg p-4 w-full max-w-md my-0 relative modal-content-animation">
+        <div class="sticky top-0 bg-white pt-2 pb-4 border-b border-gray-200 z-10">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-bold text-gray-800">Meta Service অর্ডার ফর্ম</h3>
+                <button id="closeMetaModal" class="text-gray-500 hover:text-gray-700 p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <!-- Swipe indicator for mobile -->
+            <div class="w-12 h-1 bg-gray-300 rounded-full mx-auto mt-2 md:hidden"></div>
+        </div>
+
+        <form id="metaServiceForm" class="space-y-4 mt-4 overflow-y-auto" style="max-height: 80vh;">
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                <h4 class="font-semibold text-blue-600 flex items-center">
+                    <i class="fas fa-envelope-open-text mr-2"></i>
+                    📩 সেবা গ্রহণের জন্য নিচের তথ্যগুলো পূরণ করুন:
+                </h4>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">১. পূর্ণ নাম</label>
+                <input type="text" id="meta-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">২. মোবাইল নাম্বার / হোয়াটসঅ্যাপ নাম্বার</label>
+                <input type="tel" id="meta-phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">৩. ইমেইল (ঐচ্ছিক)</label>
+                <input type="email" id="meta-email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">৪. আইডি লিংক</label>
+                <input type="url" id="meta-link" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
+                <p class="text-sm text-gray-500 mt-1">👉 যেই Facebook / Instagram / WhatsApp আইডি বা পেজে সমস্যা, তার লিংক দিন।</p>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">৫. সার্ভিস / প্ল্যাটফর্ম নির্বাচন করুন:</label>
+                <div class="grid grid-cols-3 gap-3 mt-2">
+                    <div class="bg-blue-50 p-3 rounded-lg border border-blue-200 hover:bg-blue-100 transition radio-card">
+                        <input type="radio" id="platform-facebook" name="platform" value="Facebook" class="hidden" required>
+                        <label for="platform-facebook" class="flex flex-col items-center cursor-pointer">
+                            <i class="fab fa-facebook text-blue-600 text-2xl mb-1 radio-icon"></i>
+                            <span class="text-sm text-center">Facebook</span>
+                        </label>
+                    </div>
+                    <div class="bg-pink-50 p-3 rounded-lg border border-pink-200 hover:bg-pink-100 transition radio-card">
+                        <input type="radio" id="platform-instagram" name="platform" value="Instagram" class="hidden">
+                        <label for="platform-instagram" class="flex flex-col items-center cursor-pointer">
+                            <i class="fab fa-instagram text-pink-600 text-2xl mb-1 radio-icon"></i>
+                            <span class="text-sm text-center">Instagram</span>
+                        </label>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded-lg border border-green-200 hover:bg-green-100 transition radio-card">
+                        <input type="radio" id="platform-whatsapp" name="platform" value="WhatsApp" class="hidden">
+                        <label for="platform-whatsapp" class="flex flex-col items-center cursor-pointer">
+                            <i class="fab fa-whatsapp text-green-600 text-2xl mb-1 radio-icon"></i>
+                            <span class="text-sm text-center">WhatsApp</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">৬. সমস্যার ধরণ / সার্ভিস টাইপ:</label>
+                <div class="grid grid-cols-2 gap-3 mt-2">
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="service-bluetick" name="service-type" value="Verified Badge (Blue Tick)" class="hidden" required>
+                        <label for="service-bluetick" class="flex items-center cursor-pointer">
+                            <i class="fas fa-check-circle text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">Verified Badge (Blue Tick)</span>
+                        </label>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="service-business" name="service-type" value="Business Manager Issue" class="hidden">
+                        <label for="service-business" class="flex items-center cursor-pointer">
+                            <i class="fas fa-briefcase text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">Business Manager Issue</span>
+                        </label>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="service-ad" name="service-type" value="Ad Account Problem" class="hidden">
+                        <label for="service-ad" class="flex items-center cursor-pointer">
+                            <i class="fas fa-ad text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">Ad Account Problem</span>
+                        </label>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="service-recovery" name="service-type" value="Account Recovery" class="hidden">
+                        <label for="service-recovery" class="flex items-center cursor-pointer">
+                            <i class="fas fa-undo text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">Account Recovery</span>
+                        </label>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="service-restriction" name="service-type" value="Page Restriction / Ban" class="hidden">
+                        <label for="service-restriction" class="flex items-center cursor-pointer">
+                            <i class="fas fa-ban text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">Page Restriction / Ban</span>
+                        </label>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="service-whatsapp" name="service-type" value="WhatsApp Business Verification" class="hidden">
+                        <label for="service-whatsapp" class="flex items-center cursor-pointer">
+                            <i class="fab fa-whatsapp text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">WhatsApp Business Verification</span>
+                        </label>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="service-other" name="service-type" value="অন্যান্য" class="hidden">
+                        <label for="service-other" class="flex items-center cursor-pointer">
+                            <i class="fas fa-ellipsis-h text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">অন্যান্য</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">৭. সংক্ষিপ্ত বর্ণনা (ঐচ্ছিক)</label>
+                <textarea id="meta-description" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                <p class="text-sm text-gray-500 mt-1">👉 আপনার সমস্যাটি ১-২ লাইনে ব্যাখ্যা করুন।</p>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">৮. প্রয়োজনীয় ডকুমেন্ট (ঐচ্ছিক)</label>
+                <textarea id="meta-documents" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="NID/Passport বা ব্যবসায়িক লাইসেন্স, যদি ভেরিফিকেশনের জন্য দরকার হয়।"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="block text-gray-700 mb-2 font-medium">৯. সেবার অগ্রাধিকার (Priority Level):</label>
+                <div class="grid grid-cols-2 gap-3 mt-2">
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="priority-normal" name="priority" value="সাধারন (৩-৭ কার্যদিবস)" class="hidden" required>
+                        <label for="priority-normal" class="flex items-center cursor-pointer">
+                            <i class="fas fa-clock text-blue-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">সাধারন (৩-৭ কার্যদিবস)</span>
+                        </label>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 hover:bg-gray-100 transition radio-card">
+                        <input type="radio" id="priority-urgent" name="priority" value="জরুরি (১-৩ কার্যদিবস) 🔥" class="hidden">
+                        <label for="priority-urgent" class="flex items-center cursor-pointer">
+                            <i class="fas fa-fire text-red-500 mr-2 radio-icon"></i>
+                            <span class="text-sm">জরুরি (১-৩ কার্যদিবস) 🔥</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="text-xs text-red-500 mt-1">* জরুরি সেবার জন্য এক্সট্রা চার্জ প্রযোজ্য হতে পারে</p>
+            </div>
+            
+            <div class="form-group">
+                <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+                    <input type="checkbox" id="meta-agreement" class="mt-1 mr-2" required>
+                    <label for="meta-agreement" class="text-gray-700">
+                        <span class="font-semibold">১০. সম্মতি:</span><br>
+                        ☑️ আমি নিশ্চিত করছি যে উপরের তথ্যগুলো সঠিক এবং Meta-এর নীতিমালা অনুসারে সেবা গ্রহণে আগ্রহী।
+                    </label>
+                </div>
+            </div>
+            
+            <div class="mt-4 text-sm text-gray-600 bg-gray-100 p-3 rounded-lg">
+                <p class="font-semibold flex items-center">
+                    <i class="fas fa-info-circle mr-2 text-blue-500"></i>
+                    ✅ বিশেষ দ্রষ্টব্য:
+                </p>
+                <p>আমরা শুধুমাত্র নীতিমালা অনুযায়ী এবং সঠিক তথ্যের ভিত্তিতে ভেরিফিকেশন প্রসেস করি। কোনো ধরনের ভুল তথ্য প্রদান করলে সার্ভিস বাতিল হতে পারে।</p>
+            </div>
+            
+            <!-- Space for fixed bottom buttons -->
+            <div class="h-24 md:h-0"></div>
+        </form>
+        
+        <div class="fixed bottom-0 left-0 right-0 bg-white pt-4 pb-4 px-4 border-t border-gray-200 z-20 md:static md:border-t-0">
+            <button id="metaSubmitBtn" type="button" class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 rounded-lg hover:from-green-700 hover:to-green-800 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+                <i class="fab fa-whatsapp text-xl"></i> সার্ভিস নিন
+            </button>
+            
+            <button id="metaCancelBtn" type="button" class="w-full mt-2 bg-gray-100 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition duration-300 flex items-center justify-center gap-2">
+                <i class="fas fa-times"></i> বাতিল করুন
+            </button>
+        </div>
+    </div>
+</div>
+
