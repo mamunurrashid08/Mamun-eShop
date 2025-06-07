@@ -370,10 +370,44 @@
             return;
         }
 
-        const message = `🔄 রোমিং সিম রিচার্জ অনুরোধ\n\n👤 নাম: ${name}\n📱 নম্বর: ${number}\n📡 অপারেটর: ${operator}\n💵 পরিমাণ: ${amount} ডলার`;
+        // সহজ এবং সংক্ষিপ্ত মেসেজ
+        const message = `🔄 রোমিং সিম রিচার্জ অনুরোধ
+
+👤 নাম: ${name}
+📱 নম্বর: ${number}  
+📡 অপারেটর: ${operator}
+💵 পরিমাণ: ${amount} ডলার`;
+
         const phoneNumber = "8801886191222";
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
+        
+        // বিভিন্ন URL ফরম্যাট চেষ্টা করা
+        const urls = [
+            `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+            `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
+            `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
+        ];
+        
+        // প্রথমে wa.me চেষ্টা করুন
+        let success = false;
+        
+        try {
+            window.open(urls[0], '_blank');
+            success = true;
+        } catch (error) {
+            console.log("wa.me failed, trying api.whatsapp.com");
+        }
+        
+        // যদি প্রথমটা কাজ না করে, ২ সেকেন্ড পর দ্বিতীয়টা চেষ্টা করুন
+        if (!success) {
+            setTimeout(() => {
+                try {
+                    window.open(urls[1], '_blank');
+                } catch (error) {
+                    // সব ব্যর্থ হলে ম্যানুয়াল উপায়
+                    alert(`WhatsApp এ ${phoneNumber} নম্বরে এই মেসেজটি পাঠান:\n\n${message}`);
+                }
+            }, 2000);
+        }
     }
 </script>
 
