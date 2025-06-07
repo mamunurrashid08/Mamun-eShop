@@ -356,26 +356,7 @@
         </button>
     </div>
 </div>
-<!-- রোমিং সিম রিচার্জ সেকশন শেষ -->
-</script>
-    function redirectToRoamingWhatsApp() {
-        const name = document.getElementById("roaming-name").value.trim();
-        const number = document.getElementById("roaming-number").value.trim();
-        const operator = document.getElementById("roaming-operator").value;
-        const amount = document.getElementById("roaming-amount").value.trim();
-
-        if (!name || !number || !operator || !amount) {
-            alert("অনুগ্রহ করে সবগুলো তথ্য পূরণ করুন।");
-            return;
-        }
-
-        const message = `🔄 রোমিং সিম রিচার্জ অনুরোধ\n\n👤 নাম: ${name}\n📱 নম্বর: ${number}\n📡 অপারেটর: ${operator}\n💵 পরিমাণ: ${amount} ডলার`;
-
-        const whatsappUrl = `https://wa.me/8801886191222?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-    }
-	    </script>
-		    
+<!-- রোমিং সিম রিচার্জ সেকশন শেষ -->    
 
 <!-- স্ক্রিপ্ট অংশ -->
 <script>
