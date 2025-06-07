@@ -357,7 +357,6 @@
     </div>
 </div>
 <!-- রোমিং সিম রিচার্জ সেকশন শেষ -->    
-
 <!-- স্ক্রিপ্ট অংশ -->
 <script>
     function redirectToRoamingWhatsApp() {
@@ -377,62 +376,6 @@
         window.open(whatsappUrl, '_blank');
     }
 </script>
-		    
-<!-- রোমিং সিম রিচার্জ সেকশন শুরু -->
-<div class="bg-white rounded-lg shadow-lg p-6 card-hover">
-    <div class="text-center mb-4">
-        <i class="fas fa-globe text-4xl text-purple-600 mb-4"></i>
-        <h3 class="text-xl font-bold text-gray-800">রোমিং সিম রিচার্জ</h3>
-        <p class="text-gray-600 mt-2">সহজে আপনার রোমিং সিম রিচার্জ করুন</p>
-    </div>
-    
-    <div class="bg-white p-6 rounded-lg shadow-sm">
-        <div class="form-group mb-4">
-            <label for="roaming-name" class="block text-gray-700 mb-2">আপনার নাম</label>
-            <input type="text" id="roaming-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-        </div>
-        <div class="form-group mb-4">
-            <label for="roaming-number" class="block text-gray-700 mb-2">রিচার্জ নম্বর</label>
-            <input type="tel" id="roaming-number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-        </div>
-        <div class="form-group mb-4">
-            <label for="roaming-operator" class="block text-gray-700 mb-2">অপারেটর</label>
-            <select id="roaming-operator" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-                <option value="" disabled selected>অপারেটর নির্বাচন করুন</option>
-                <option value="Robi">রবি</option>
-                <option value="Grameenphone">গ্রামীণফোন</option>
-                <option value="Banglalink">বাংলালিংক</option>
-                <option value="Airtel">এয়ারটেল</option>
-            </select>
-        </div>
-        <div class="form-group mb-4">
-            <label for="roaming-amount" class="block text-gray-700 mb-2">রিচার্জ পরিমাণ (ডলার)</label>
-            <input type="number" id="roaming-amount" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-        </div>
-        <button onclick="redirectToRoamingWhatsApp()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300 flex items-center justify-center gap-2">
-            <i class="fas fa-paper-plane"></i> রিচার্জ করুন
-        </button>
-    </div>
-</div>
-		    <script>
-    function redirectToRoamingWhatsApp() {
-        const name = document.getElementById("roaming-name").value.trim();
-        const number = document.getElementById("roaming-number").value.trim();
-        const operator = document.getElementById("roaming-operator").value;
-        const amount = document.getElementById("roaming-amount").value.trim();
-
-        if (!name || !number || !operator || !amount) {
-            alert("অনুগ্রহ করে সবগুলো তথ্য পূরণ করুন।");
-            return;
-        }
-
-        const message = `🔄 রোমিং সিম রিচার্জ অনুরোধ\n\n👤 নাম: ${name}\n📱 নম্বর: ${number}\n📡 অপারেটর: ${operator}\n💵 পরিমাণ: ${amount} ডলার`;
-
-        const whatsappUrl = `https://wa.me/8801886191222?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-    }
-		    </script>
-<!-- রোমিং সিম রিচার্জ সেকশন শেষ -->
 
 <!-- সিম রোমিং সার্ভিস সেকশন শুরু -->
 <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
