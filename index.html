@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মামুনুর রশিদ - ডিজিটাল সার্ভিস প্রদানকারী</title>
+    <meta name="description" content="মামুনুর রশিদ ডিজিটাল সার্ভিস - রিচার্জ, ভিডিও এডিটিং, কাস্টম ফর্ম এবং সিম রোমিং সার্ভিস">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">মামুনুর রহমান</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-300">হোম</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">আমার সম্পর্কে</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">সার্ভিস</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition duration-300">মূল্য</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">যোগাযোগ</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-blue-600">হোম</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600">আমার সম্পর্কে</a>
+                <a href="#services" class="block px-3 py-2 text-gray-600 hover:text-blue-600">সার্ভিস</a>
+                <a href="#pricing" class="block px-3 py-2 text-gray-600 hover:text-blue-600">মূল্য</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600">যোগাযোগ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <div class="w-48 h-48 mx-auto mb-6 overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="images/1000332232.jpg" alt="মামুনুর রশিদ" class="w-full h-full object-cover rounded-full border-8 border-white shadow-xl bg-white">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">স্বাগতম!</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">আমি মামুনুর রশিদ</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+                    আমি একজন ডিজিটাল সার্ভিস প্রদানকারী। আপনার সব ধরনের ডিজিটাল প্রয়োজন পূরণে আমি এখানে আছি।
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-search mr-2"></i>সার্ভিস দেখুন
+                    </a>
+                    <a href="#contact" class="bg-green-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-600 transition duration-300">
+                        <i class="fas fa-phone mr-2"></i>যোগাযোগ করুন
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">আমার সম্পর্কে</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">আমি কে এবং কী করি</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        আমি একজন অভিজ্ঞ ডিজিটাল সার্ভিস প্রদানকারী যিনি গত ৫ বছর ধরে বিভিন্ন ধরনের ডিজিটাল সমাধান প্রদান করে আসছি। আমার বিশেষত্ব হলো "Brilliant Connect, Sonido Global, এবং রোমিং সিম রিচার্জ" সার্ভিস, ভিডিও এডিটিং, কাস্টম ফর্ম তৈরি, সিম রোমিং সার্ভিস এবং ডিজিটাল আইডিয়া কনসালটেন্সি।
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center p-4 bg-blue-50 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">৫+</div>
+                            <div class="text-gray-600">বছরের অভিজ্ঞতা</div>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                            <div class="text-3xl font-bold text-green-600 mb-2">১০০+</div>
+                            <div class="text-gray-600">সন্তুষ্ট ক্লায়েন্ট</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-purple-50 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">২৪/৭</div>
+                            <div class="text-gray-600">কাস্টমার সাপোর্ট</div>
+                        </div>
+                        <div class="text-center p-4 bg-yellow-50 rounded-lg">
+                            <div class="text-3xl font-bold text-yellow-600 mb-2">দ্রুত</div>
+                            <div class="text-gray-600">ডেলিভারি</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:pl-8">
+                    <h4 class="text-xl font-bold text-gray-800 mb-6">কেন আমাকে বেছে নেবেন?</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-4"></i>
+                            <span class="text-gray-600">উচ্চ মানের কাজ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-4"></i>
+                            <span class="text-gray-600">সময়মতো ডেলিভারি</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-4"></i>
+                            <span class="text-gray-600">প্রতিযোগিতামূলক মূল্য</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-4"></i>
+                            <span class="text-gray-600">পেশাদার যোগাযোগ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-4"></i>
+                            <span class="text-gray-600">১০০% সন্তুষ্টির গ্যারান্টি</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement 1 -->
+    <div class="py-8 bg-gray-100 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-4 text-gray-500 text-sm">বিজ্ঞাপন</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '36cfb0ea8ec4bf3e09687620f0d99d7f',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/36cfb0ea8ec4bf3e09687620f0d99d7f/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">আমার সার্ভিস সমূহ</h2>
+                <p class="text-gray-600 text-lg">আপনার সব ধরনের ডিজিটাল প্রয়োজনের জন্য আমি এখানে আছি</p>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Recharge Section শুরু -->
+<div class="bg-white p-6 rounded-xl shadow-md w-full max-w-md mx-auto my-10">
+  <div class="text-center mb-6">
+    <div class="text-purple-500 text-5xl mb-2">📱</div>
+    <h1 class="text-xl font-bold">রিচার্জ সার্ভিস</h1>
+    <p class="text-gray-600">Brilliant Connect ও Sonido Global রিচার্জ সার্ভিস।</p>
+  </div>
+
+  <div class="flex justify-center gap-2 mb-4">
+    <button id="brilliantBtn" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg w-1/2 font-semibold">
+      ⭐ Brilliant Connect
+    </button>
+    <button id="sonidoBtn" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg w-1/2 font-semibold">
+      🌐 Sonido Global
+    </button>
+  </div>
+
+  <!-- Brilliant Form -->
+  <form id="brilliantForm" class="space-y-3 form-section">
+    <h2 class="text-lg font-semibold">Brilliant Connect রিচার্জ</h2>
+    <input type="text" id="brilliantName" placeholder="আপনার নাম" class="w-full border border-gray-300 p-2 rounded-md" required />
+    <input type="text" id="brilliantNumber" placeholder="রিচার্জ নম্বর" class="w-full border border-gray-300 p-2 rounded-md" required />
+    <input type="number" id="brilliantAmount" placeholder="রিচার্জ পরিমাণ (টাকা)" class="w-full border border-gray-300 p-2 rounded-md" required />
+    <button type="button" onclick="sendWhatsApp('brilliant')" class="w-full bg-blue-600 text-white py-2 rounded-lg flex items-center justify-center gap-2">
+      🛒 অর্ডার করুন
+    </button>
+  </form>
+
+  <!-- Sonido Form -->
+  <form id="sonidoForm" class="space-y-3 form-section hidden">
+    <h2 class="text-lg font-semibold">Sonido Global রিচার্জ</h2>
+    <input type="text" id="sonidoName" placeholder="আপনার নাম" class="w-full border border-gray-300 p-2 rounded-md" required />
+    <input type="text" id="sonidoNumber" placeholder="রিচার্জ নম্বর" class="w-full border border-gray-300 p-2 rounded-md" required />
+    <input type="number" id="sonidoAmount" placeholder="রিচার্জ পরিমাণ (টাকা)" class="w-full border border-gray-300 p-2 rounded-md" required />
+    <button type="button" onclick="sendWhatsApp('sonido')" class="w-full bg-green-600 text-white py-2 rounded-lg flex items-center justify-center gap-2">
+      🛒 অর্ডার করুন
+    </button>
+  </form>
+</div>
+<!-- Recharge Section শেষ -->
+
+<!-- JavaScript অংশ -->
+<script>
+  const brilliantBtn = document.getElementById('brilliantBtn');
+  const sonidoBtn = document.getElementById('sonidoBtn');
+  const brilliantForm = document.getElementById('brilliantForm');
+  const sonidoForm = document.getElementById('sonidoForm');
+
+  brilliantBtn.addEventListener('click', () => {
+    brilliantForm.classList.remove('hidden');
+    sonidoForm.classList.add('hidden');
+  });
+
+  sonidoBtn.addEventListener('click', () => {
+    sonidoForm.classList.remove('hidden');
+    brilliantForm.classList.add('hidden');
+  });
+
+  function sendWhatsApp(type) {
+    let name, number, amount, service;
+    if (type === 'brilliant') {
+      name = document.getElementById('brilliantName').value;
+      number = document.getElementById('brilliantNumber').value;
+      amount = document.getElementById('brilliantAmount').value;
+      service = "Brilliant Connect";
+    } else {
+      name = document.getElementById('sonidoName').value;
+      number = document.getElementById('sonidoNumber').value;
+      amount = document.getElementById('sonidoAmount').value;
+      service = "Sonido Global";
+    }
+
+    if (!name || !number || !amount) {
+      alert("সব তথ্য দিন!");
+      return;
+    }
+
+    const message = `🔥 ${service} রিচার্জ অর্ডার\n👤 নাম: ${name}\n📞 রিচার্জ নম্বর: ${number}\n💳 পরিমাণ: ${amount} টাকা`;
+    const phoneNumber = "8801XXXXXXXXX"; // এখানে তোমার WhatsApp নম্বর দাও
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+<!-- রোমিং সিম রিচার্জ সেকশন শুরু -->
+<div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+    <div class="text-center mb-4">
+        <i class="fas fa-globe text-4xl text-purple-600 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800">রোমিং সিম রিচার্জ</h3>
+        <p class="text-gray-600 mt-2">সহজে আপনার রোমিং সিম রিচার্জ করুন</p>
+    </div>
+    
+    <div class="bg-white p-6 rounded-lg shadow-sm">
+        <div class="form-group mb-4">
+            <label for="roaming-name" class="block text-gray-700 mb-2">আপনার নাম</label>
+            <input type="text" id="roaming-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <div class="form-group mb-4">
+            <label for="roaming-number" class="block text-gray-700 mb-2">রিচার্জ নম্বর</label>
+            <input type="tel" id="roaming-number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <div class="form-group mb-4">
+            <label for="roaming-operator" class="block text-gray-700 mb-2">অপারেটর</label>
+            <select id="roaming-operator" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                <option value="" disabled selected>অপারেটর নির্বাচন করুন</option>
+                <option value="Robi">রবি</option>
+                <option value="Grameenphone">গ্রামীণফোন</option>
+                <option value="Banglalink">বাংলালিংক</option>
+                <option value="Airtel">এয়ারটেল</option>
+            </select>
+        </div>
+        <div class="form-group mb-4">
+            <label for="roaming-amount" class="block text-gray-700 mb-2">রিচার্জ পরিমাণ (ডলার)</label>
+            <input type="number" id="roaming-amount" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <button onclick="redirectToRoamingWhatsApp()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300 flex items-center justify-center gap-2">
+            <i class="fas fa-paper-plane"></i> রিচার্জ করুন
+        </button>
+    </div>
+</div>
+<!-- রোমিং সিম রিচার্জ সেকশন শেষ -->
+
+<script>
+    function redirectToRoamingWhatsApp() {
+        const name = document.getElementById('roaming-name').value;
+        const number = document.getElementById('roaming-number').value;
+        const operator = document.getElementById('roaming-operator').value;
+        const amount = document.getElementById('roaming-amount').value;
+
+        if (!name || !number || !operator || !amount) {
+            alert('অনুগ্রহ করে সকল প্রয়োজনীয় তথ্য পূরণ করুন।');
+            return;
+        }
+
+        const message = `রোমিং সিম রিচার্জের জন্য আবেদন:\nনাম: ${name}\nরিচার্জ নম্বর: ${number}\nঅপারেটর: ${operator}\nরিচার্জ পরিমাণ (ডলার): ${amount}`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/8801886191222?text=${encodedMessage}`;
+        window.location.href = whatsappUrl;
+    }
+</script>
+
+<!-- সিম রোমিং সার্ভিস সেকশন শুরু -->
+<div class="bg-white rounded-lg shadow-lg p-6 card-hover md:col-span-2">
+    <div class="text-center mb-4">
+        <i class="fas fa-globe text-4xl text-purple-600 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-800">সিম রোমিং সার্ভিস</h3>
+        <p class="text-gray-600 mt-2">সব অপারেটরের আন্তর্জাতিক রোমিং সার্ভিস সক্রিয় করুন</p>
+    </div>
+    
+    <div class="mb-6">
+        <div class="bg-purple-50 p-4 rounded-lg mb-4">
+            <h4 class="font-bold text-purple-800 mb-2">কেন আমাদের সার্ভিসটি বেছে নেবেন?</h4>
+            <ul class="text-sm text-gray-600 space-y-1 pl-4">
+                <li>• সরল প্রক্রিয়া: রোমিং চালুর জটিলতা থেকে মুক্তি—আমরা আপনার জন্য সবকিছু পরিচালনা করি।</li>
+                <li>• ব্যক্তিগতকৃত পরামর্শ: আপনার ভ্রমণের গন্তব্য ও ব্যবহারের ধরনের উপর ভিত্তি করে সর্বোত্তম প্যাকেজ সুপারিশ।</li>
+                <li>• সময়বাঁচানো: অপারেটরের অফিসে যাওয়া বা কাস্টমার কেয়ারে অপেক্ষা করার প্রয়োজন নেই—সবকিছু অনলাইন।</li>
+            </ul>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-bold text-blue-800 mb-2">রবি/এয়ারটেল রোমিং</h4>
+                <ul class="text-sm text-gray-600 space-y-1 pl-4">
+                    <li>• ১০০+ দেশে বিস্তৃত নেটওয়ার্ক কভারেজ।</li>
+                    <li>• ৭২টি দেশে আকর্ষণীয় ডেটা প্যাক।</li>
+                    <li>• কল, এসএমএস ও ডেটা সুবিধা বিশ্বব্যাপী।</li>
+                </ul>
+            </div>
+            
+            <div class="bg-green-50 p-4 rounded-lg">
+                <h4 class="font-bold text-green-800 mb-2">গ্রামীণফোন/বাংলালিংক রোমিং</h4>
+                <ul class="text-sm text-gray-600 space-y-1 pl-4">
+                    <li>• বিশ্বের সবচেয়ে বড় রোমিং নেটওয়ার্ক।</li>
+                    <li>• বার্ষিক প্ল্যান ও স্মার্ট রোমিং প্যাক।</li>
+                    <li>• হজ্জ ও ওমরাহ পালনকারীদের জন্য বিশেষ অফার।</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h4 class="font-bold text-gray-800 mb-4">রোমিং সার্ভিস অ্যাক্টিভেশন ফর্ম</h4>
+        <div class="form-group mb-4">
+            <label for="roaming-service-name" class="block text-gray-700 mb-2">আপনার নাম</label>
+            <input type="text" id="roaming-service-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <div class="form-group mb-4">
+            <label for="roaming-service-number" class="block text-gray-700 mb-2">রোমিং নম্বর</label>
+            <input type="tel" id="roaming-service-number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <div class="form-group mb-4">
+            <label for="roaming-service-operator" class="block text-gray-700 mb-2">অপারেটর</label>
+            <select id="roaming-service-operator" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                <option value="" disabled selected>অপারেটর নির্বাচন করুন</option>
+                <option value="Robi">রবি</option>
+                <option value="Airtel">এয়ারটেল</option>
+                <option value="Grameenphone">গ্রামীণফোন</option>
+                <option value="Banglalink">বাংলালিংক</option>
+            </select>
+        </div>
+        <div class="form-group mb-4">
+            <label for="roaming-service-country" class="block text-gray-700 mb-2">গন্তব্য দেশ</label>
+            <input type="text" id="roaming-service-country" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <div class="form-group mb-4">
+            <label for="roaming-service-details" class="block text-gray-700 mb-2">অতিরিক্ত তথ্য (যদি থাকে)</label>
+            <input type="text" id="roaming-service-details" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <button onclick="redirectToRoamingServiceWhatsApp()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300 flex items-center justify-center gap-2">
+            <i class="fas fa-paper-plane"></i> সার্ভিস নিন
+        </button>
+    </div>
+    
+    <p class="text-sm text-gray-500 mt-4 text-center">
+        <strong>দ্রষ্টব্য:</strong> রোমিং প্যাকের মূল্য ও শর্তাবলী অপারেটর নির্ধারিত। আমরা শুধুমাত্র দক্ষ অ্যাক্টিভেশন সেবা প্রদান করি।
+    </p>
+</div>
+<!-- সিম রোমিং সার্ভিস সেকশন শেষ -->
+
+<script>
+    function redirectToRoamingServiceWhatsApp() {
+        const name = document.getElementById('roaming-service-name').value;
+        const number = document.getElementById('roaming-service-number').value;
+        const operator = document.getElementById('roaming-service-operator').value;
+        const country = document.getElementById('roaming-service-country').value;
+        const details = document.getElementById('roaming-service-details').value;
+
+        if (!name || !number || !operator || !country) {
+            alert('অনুগ্রহ করে সকল প্রয়োজনীয় তথ্য পূরণ করুন।');
+            return;
+        }
+
+        const message = `রোমিং সার্ভিসের জন্য আবেদন:\nনাম: ${name}\nরোমিং নম্বর: ${number}\nঅপারেটর: ${operator}\nগন্তব্য দেশ: ${country}\nঅতিরিক্ত তথ্য: ${details || 'কোনো অতিরিক্ত তথ্য নেই'}`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/8801886191222?text=${encodedMessage}`;
+        window.location.href = whatsappUrl;
+    }
+</script>                
+
+                <!-- Video Editing -->
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-video text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">ভিডিও এডিটিং</h3>
+                        <p class="text-gray-600 mt-2">প্রমোশনাল ভিডিও, ইউটিউব ভিডিও, শর্ট ফিল্ম এবং সব ধরনের ভিডিও এডিটিং</p>
+                    </div>
+                    <a href="https://mamun-payment.vercel.app/" target="_blank" class="block w-full text-center bg-red-600 text-white py-2 rounded mt-4 hover:bg-red-700 transition duration-300">
+                        অর্ডার করুন
+                    </a>
+                </div>
+
+                <!-- Custom Form -->
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-database text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">কাস্টম ফর্ম/ডেটাবেইস</h3>
+                        <p class="text-gray-600 mt-2">অনলাইন ফর্ম, ডেটা কালেকশন, ডেটাবেইস ডিজাইন এবং ম্যানেজমেন্ট সিস্টেম</p>
+                    </div>
+                    <a href="https://mamun-payment.vercel.app/" target="_blank" class="block w-full text-center bg-green-600 text-white py-2 rounded mt-4 hover:bg-green-700 transition duration-300">
+                        অর্ডার করুন
+                    </a>
+                </div>
+
+                <!-- Consultancy -->
+                <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-lightbulb text-4xl text-yellow-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800">আইডিয়া কনসালটেন্সি</h3>
+                        <p class="text-gray-600 mt-2">মোবাইল অ্যাপ, ওয়েব অ্যাপ এবং ডিজিটাল বিজনেস আইডিয়া কনসালটেন্সি</p>
+                    </div>
+                    <a href="https://mamun-payment.vercel.app/" target="_blank" class="block w-full text-center bg-yellow-600 text-white py-2 rounded mt-4 hover:bg-yellow-700 transition duration-300">
+                        অর্ডার করুন
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">মূল্য তালিকা</h2>
+                <p class="text-gray-600 text-lg">স্বচ্ছ এবং প্রতিযোগিতামূলক মূল্যে আমার সার্ভিস নিন</p>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Recharge Pricing -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">রিচার্জ সার্ভিস</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Brilliant Connect</span>
+                            <span class="font-semibold text-blue-600">২০-১৫০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Sonido Global</span>
+                            <span class="font-semibold text-blue-600">১০০-৫০০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">দ্রুত প্রসেসিং</span>
+                            <span class="font-semibold text-green-600">তাৎক্ষণিক</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Editing Pricing -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">ভিডিও এডিটিং</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">ইউটিউব ভিডিও</span>
+                            <span class="font-semibold text-red-600">৫০০-২০০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">প্রমোশনাল ভিডিও</span>
+                            <span class="font-semibold text-red-600">১৫০০-৫০০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">শর্ট ক্লিপ</span>
+                            <span class="font-semibold text-red-600">২০০-৮০০ টাকা</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Custom Form Pricing -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-green-800 mb-4">কাস্টম ফর্ম</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">সাধারণ ফর্ম</span>
+                            <span class="font-semibold text-green-600">১০০০-৩০০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">ডেটাবেইস সিস্টেম</span>
+                            <span class="font-semibold text-green-600">৫০০০-১৫০০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">কাস্টম সল্যুশন</span>
+                            <span class="font-semibold text-green-600">আলোচনা সাপেক্ষে</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultancy Pricing -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-yellow-800 mb-4">কনসালটেন্সি</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">আইডিয়া পরামর্শ</span>
+                            <span class="font-semibold text-yellow-600">৫০০-২০০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">বিজনেস প্ল্যান</span>
+                            <span class="font-semibold text-yellow-600">২০০০-৮০০০ টাকা</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">টেক কনসালটেশন</span>
+                            <span class="font-semibold text-yellow-600">১০০০-৫০০০ টাকা</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIM Roaming Pricing -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-purple-800 mb-4">সিম রোমিং</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">রোমিং সেটআপ</span>
+                            <span class="font-semibold text-purple-600">আলোচনা সাপেক্ষে</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">কনসালটেশন</span>
+                            <span class="font-semibold text-purple-600">ফ্রি</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">ডকুমেন্ট সাহায্য</span>
+                            <span class="font-semibold text-green-600">ফ্রি</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">পেমেন্ট পদ্ধতি</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-green-600 mr-3"></i>
+                            <span class="text-gray-600">বিকাশ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-red-600 mr-3"></i>
+                            <span class="text-gray-600">নগদ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-blue-600 mr-3"></i>
+                            <span class="text-gray-600">রকেট</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-blue-600 mr-3"></i>
+                            <span class="text-gray-600">উপায়</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement 2 -->
+    <div class="py-8 bg-gray-100 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-4 text-gray-500 text-sm">বিজ্ঞাপন</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '36cfb0ea8ec4bf3e09687620f0d99d7f',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/36cfb0ea8ec4bf3e09687620f0d99d7f/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">যোগাযোগ করুন</h2>
+                <p class="text-gray-600 text-lg">আপনার প্রয়োজন সম্পর্কে আমার সাথে আলোচনা করুন</p>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">আমার সাথে যোগাযোগ করুন</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-600 text-xl w-8"></i>
+                            <span class="text-gray-600">+৮৮০১৮৮৬১৯১২২২</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-600 text-xl w-8"></i>
+                            <span class="text-gray-600">mamunur.rashid@example.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl w-8"></i>
+                            <span class="text-gray-600">ঢাকা, বাংলাদেশ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-600 text-xl w-8"></i>
+                            <span class="text-gray-600">সকাল ৯টা - রাত ১০টা (প্রতিদিন)</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">সোশ্যাল মিডিয়া</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-700 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-700 transition duration-300">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">মেসেজ পাঠান</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">আপনার নাম</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">ইমেইল</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 mb-2">বিষয়</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">মেসেজ</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                        </div>
+                        <a href="mailto:mamun1k999@gmail.com" onclick="sendEmail(event)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 block text-center">
+                            পাঠান
+                        </a>
+                    </form>
+                    
+                    <script>
+                        function sendEmail(e) {
+                            e.preventDefault();
+                            const name = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const subject = document.getElementById('subject').value;
+                            const message = document.getElementById('message').value;
+                            
+                            if (!name || !email || !subject || !message) {
+                                alert('অনুগ্রহ করে সব তথ্য পূরণ করুন।');
+                                return;
+                            }
+                            
+                            const mailtoLink = `mailto:mamun1k999@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('নাম: ' + name + '\nইমেইল: ' + email + '\n\n' + message)}`;
+                            window.location.href = mailtoLink;
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement 3 -->
+    <div class="py-8 bg-gray-100 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-4 text-gray-500 text-sm">বিজ্ঞাপন</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '36cfb0ea8ec4bf3e09687620f0d99d7f',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/36cfb0ea8ec4bf3e09687620f0d99d7f/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">মামুনুর রশিদ</h3>
+                    <p class="text-gray-400 mb-4">আপনার সব ধরনের ডিজিটাল প্রয়োজন পূরণে আমি এখানে আছি।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">দ্রুত লিংক</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">হোম</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">আমার সম্পর্কে</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">সার্ভিস</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">মূল্য</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">যোগাযোগ</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">+৮৮০১৮৮৬১৯১২২২</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">mamunur.rashid@example.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                            <span class="text-gray-400">ঢাকা, বাংলাদেশ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; ২০২৫ মামুনুর রশিদ। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/8801886191222" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
