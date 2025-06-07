@@ -320,6 +320,293 @@
   }
 </script>
 
+		    <!-- VPN/DNS Service Section CSS -->
+<style>
+.vpn-section {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.vpn-container {
+    max-width: 450px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.vpn-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.vpn-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: white;
+}
+
+.vpn-service-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.vpn-service-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.vpn-services-list {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.vpn-services-list h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.vpn-services-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vpn-services-list li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    color: #555;
+    line-height: 1.5;
+}
+
+.vpn-services-list li:before {
+    content: "•";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.vpn-form-group {
+    margin-bottom: 20px;
+}
+
+.vpn-form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.vpn-form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background: white;
+}
+
+.vpn-form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.vpn-form-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.vpn-form-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.vpn-order-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.vpn-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.vpn-order-btn:active {
+    transform: translateY(0);
+}
+
+.vpn-whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.vpn-optional-text {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .vpn-container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .vpn-service-title {
+        font-size: 20px;
+    }
+    
+    .vpn-service-description {
+        font-size: 14px;
+    }
+}
+</style>
+
+<!-- VPN/DNS Service Section HTML -->
+<section class="vpn-section">
+    <div class="vpn-container">
+        <div class="vpn-header">
+            <div class="vpn-icon">🌐</div>
+            <h1 class="vpn-service-title">VPN/DNS Server</h1>
+            <p class="vpn-service-description">বিশ্বের যেকোনো প্রান্তের থাকেন না কেন সব সময় দেশের IP সার্ভারে কানেক্ট থাকুন।</p>
+        </div>
+        
+        <div class="vpn-services-list">
+            <h3>🛠️ সার্ভিস সমূহ</h3>
+            <ul>
+                <li>বিকাশ অ্যাপস ব্যবহার করুন বিশ্বের যে কোন দেশ থেকে আমাদের DNS সার্ভার এর মাধ্যমে। কোন VPN ডিটেক্ট এর ঝামেলা ছাড়াই। অফিশিয়াল অ্যাপস।</li>
+                <li>বিকাশ অ্যাপ iOS এবং Android উভয় ডিভাইসে ব্যবহার করতে পারবেন।</li>
+                <li>আমাদের VPN এর মাধ্যমে নগদ, Brilliant Connect, আলাপ সহ বাংলাদেশী সকল প্রকার অ্যাপ ব্যবহার করতে পারবেন।</li>
+            </ul>
+        </div>
+        
+        <form id="vpnOrderForm">
+            <div class="vpn-form-group">
+                <label class="vpn-form-label">নাম</label>
+                <input type="text" class="vpn-form-input" id="vpnCustomerName" placeholder="আপনার নাম লিখুন" required>
+            </div>
+            
+            <div class="vpn-form-group">
+                <label class="vpn-form-label">DNS/VPN সিলেক্ট করুন</label>
+                <select class="vpn-form-select" id="vpnServiceType" required>
+                    <option value="">সিলেক্ট করুন</option>
+                    <option value="Open VPN">Open VPN</option>
+                    <option value="Bkash DNS">Bkash DNS</option>
+                    <option value="Bangla VPN">Bangla VPN</option>
+                </select>
+            </div>
+            
+            <div class="vpn-form-group">
+                <label class="vpn-form-label">ইউজার আইডি <span class="vpn-optional-text">(ঐচ্ছিক)</span></label>
+                <input type="text" class="vpn-form-input" id="vpnUserId" placeholder="ইউজার আইডি (যদি থাকে)">
+            </div>
+            
+            <button type="submit" class="vpn-order-btn">
+                <svg class="vpn-whatsapp-icon" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.525 3.687"/>
+                </svg>
+                অর্ডার করুন
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- VPN/DNS Service Section JavaScript -->
+<script>
+function submitVpnOrder() {
+    const name = document.getElementById('vpnCustomerName').value.trim();
+    const serviceType = document.getElementById('vpnServiceType').value;
+    const userId = document.getElementById('vpnUserId').value.trim();
+    
+    if (!name || !serviceType) {
+        alert('নাম এবং সার্ভিস টাইপ অবশ্যই নির্বাচন করুন।');
+        return false;
+    }
+    
+    let message = `আসসালামু আলাইকুম। আমি VPN/DNS Server সার্ভিসের জন্য অর্ডার করতে চাই।
+
+নাম: ${name}
+সার্ভিস: ${serviceType}`;
+    
+    if (userId) {
+        message += `
+ইউজার আইডি: ${userId}`;
+    }
+    
+    message += `
+
+দয়া করে আমাকে সার্ভিস সম্পর্কে বিস্তারিত জানান।`;
+    
+    const whatsappUrl = `https://wa.me/8801886191222?text=${encodeURIComponent(message)}`;
+    
+    try {
+        window.open(whatsappUrl, '_blank');
+    } catch (error) {
+        window.location.href = whatsappUrl;
+    }
+    
+    return false;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const vpnForm = document.getElementById('vpnOrderForm');
+    const vpnButton = document.querySelector('.vpn-order-btn');
+    
+    if (vpnForm) {
+        vpnForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitVpnOrder();
+        });
+    }
+    
+    if (vpnButton) {
+        vpnButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            submitVpnOrder();
+        });
+    }
+});
+</script>
+		    
   <!-- রোমিং সিম রিচার্জ সেকশন শুরু -->
 <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
     <div class="text-center mb-4">
