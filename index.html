@@ -356,8 +356,8 @@
         </button>
     </div>
 </div>
-<!-- রোমিং সিম রিচার্জ সেকশন শেষ -->    
-<!-- স্ক্রিপ্ট অংশ -->
+<!-- রোমিং সিম রিচার্জ সেকশন শেষ -->  
+ <!-- স্ক্রিপ্ট অংশ -->
 <script>
     function redirectToRoamingWhatsApp() {
         const name = document.getElementById("roaming-name").value.trim();
@@ -371,8 +371,8 @@
         }
 
         const message = `🔄 রোমিং সিম রিচার্জ অনুরোধ\n\n👤 নাম: ${name}\n📱 নম্বর: ${number}\n📡 অপারেটর: ${operator}\n💵 পরিমাণ: ${amount} ডলার`;
-        const phoneNumber = "8801886191222"; // এখানে তোমার WhatsApp নম্বর দাও
-        const whatsappUrl = `https://wa.me/8801886191222?text=${encodeURIComponent(message)}`;
+        const phoneNumber = "8801886191222";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     }
 </script>
