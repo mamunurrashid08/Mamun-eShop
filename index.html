@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+// Font Awesome-এর জন্য প্রয়োজনীয় ইম্পোর্ট
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // শুধু WhatsApp আইকন ইম্পোর্ট করছি
+
+// Font Awesome লাইব্রেরিতে WhatsApp আইকন যোগ করুন
+library.add(faWhatsapp);
+
 const AboutSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        {/* Advertisement Section Starts Here */}
-        <div className="bg-gradient-to-r from-green-500 to-teal-600 text-white py-6 shadow-md my-12 rounded-lg"> {/* Added rounded-lg for consistency */}
+        {/* নিচের বিজ্ঞাপন সেকশন শুরু */}
+        <div className="bg-gradient-to-r from-green-500 to-teal-600 text-white py-6 shadow-md my-12 rounded-lg">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                     <div className="mb-4 md:mb-0 text-center md:text-left">
@@ -14,12 +22,13 @@ const AboutSection = () => {
                         <p className="text-white text-opacity-90 text-lg">আমাদের WhatsApp চ্যানেলে জয়েন করুন এবং পান বিশেষ অফার ও আপডেট!</p>
                     </div>
                     <a href="https://whatsapp.com/channel/0029Va9bi2611ulN55tZro07" className="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition duration-300 shadow-md flex items-center">
-                        <i className="fab fa-whatsapp text-xl mr-2"></i> জয়েন করুন
+                        {/* Font Awesome Icon ব্যবহার */}
+                        <FontAwesomeIcon icon={faWhatsapp} className="mr-2" /> জয়েন করুন
                     </a>
                 </div>
             </div>
         </div>
-        {/* Advertisement Section Ends Here */}
+        {/* নিচের বিজ্ঞাপন সেকশন শেষ */}
 
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
